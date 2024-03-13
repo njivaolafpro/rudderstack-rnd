@@ -20,6 +20,6 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(port, () => {
-  trackingServiceInstance = trackingService.init();
+  trackingServiceInstance = trackingService.init({ apiKey: '2dXSIsvMJuqxwHiN9uZI1F60OU6', dataPlaneUrl: "https://planityolsixtq.dataplane.rudderstack.com" });
   console.log(`Example app listening on port ${port}`);
 });

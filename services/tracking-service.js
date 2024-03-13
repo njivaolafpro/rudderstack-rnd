@@ -32,9 +32,9 @@ const track = ({ userId, eventName, eventType }) => {
   });
 };
 
-const init = () => {
-  client = new RudderAnalytics("2dXSIsvMJuqxwHiN9uZI1F60OU6", {
-    dataPlaneUrl: "https://planityolsixtq.dataplane.rudderstack.com",
+const init = ({ apiKey, dataPlaneUrl }) => {
+  client = new RudderAnalytics(apiKey, {
+    dataPlaneUrl,
   });
 
   return { actions: { track } };
