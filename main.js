@@ -1,7 +1,7 @@
 const express = require("express");
 const trackingService = require("./services/tracking-service");
 const app = express();
-const port = 3000;
+const port = 3010;
 
 let trackingServiceInstance;
 
@@ -20,6 +20,9 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(port, () => {
-  trackingServiceInstance = trackingService.init({ apiKey: '2dXSIsvMJuqxwHiN9uZI1F60OU6', dataPlaneUrl: "https://planityolsixtq.dataplane.rudderstack.com" });
+  trackingServiceInstance = trackingService.init({
+    apiKey: "2dgQEezs8dG75XIdX4M9KxMz32B",
+    dataPlaneUrl: "http://localhost:8080",
+  });
   console.log(`Example app listening on port ${port}`);
 });
